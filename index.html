@@ -31,7 +31,7 @@
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
   }
-
+  
   .modal-content {
     position: relative;
     background-color: #121212;
@@ -44,56 +44,54 @@
     animation-name: animatetop;
     animation-duration: 0.4s;
   }
-
+  
   @-webkit-keyframes animatetop {
     from {
       top: -300px;
       opacity: 0
     }
-
     to {
       top: 0;
       opacity: 1
     }
   }
-
+  
   @keyframes animatetop {
     from {
       top: -300px;
       opacity: 0
     }
-
     to {
       top: 0;
       opacity: 1
     }
   }
-
+  
   .close {
     color: white;
     float: right;
     font-size: 28px;
     font-weight: bold;
   }
-
+  
   .close:hover,
   .close:focus {
     color: white;
     text-decoration: none;
     cursor: pointer;
   }
-
+  
   .modal-header {
     padding: 2px 16px;
     background-color: #191919;
     color: white;
     border-color: #4d4e4f;
   }
-
+  
   .modal-body {
     padding: 2px 16px;
   }
-
+  
   .modal-footer {
     padding: 2px 16px;
     background-color: #191919;
@@ -329,7 +327,7 @@
       </div>
       <center>
         <h4 data-aos="fade-right" data-aos-delay="1000">Priority orders have an added 20% cost</h4>
-        <h4 data-aos="fade-left" data-aos-delay="1000">Special orders are also available, please message one of the COO for more information</h4>
+        <h4 data-aos="fade-left" data-aos-offset="-20" data-aos-delay="1000">Special orders are also available, please message one of the COO for more information</h4>
       </center>
 
     </div>
@@ -337,8 +335,8 @@
 
   <div class="feature">
     <div class="text-center">
-      <h2 data-aos="slide-left">TESTIMONIALS</h2>
-      <div class="title-line" data-aos="slide-right"></div>
+      <h2 data-aos="slide-left" data-aos-offset="-20">TESTIMONIALS</h2>
+      <div class="title-line" data-aos="slide-right" data-aos-offset="-20"></div>
       <p>
         Yes good grinding company - Person
       </p>
@@ -360,7 +358,7 @@
     </div>
   </div>
 
-<div id="myModal2" class="modal">
+  <div id="myModal2" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <span class="close">&times;</span>
@@ -384,42 +382,42 @@
   </footer>
 
   <script>
-var btn = document.querySelectorAll('button.modal-button');
-var modals = document.querySelectorAll('.modal');
-var spans = document.getElementsByClassName('close');
+    var btn = document.querySelectorAll('button.modal-button');
+    var modals = document.querySelectorAll('.modal');
+    var spans = document.getElementsByClassName('close');
 
-for (var i = 0; i < btn.length; i++) {
-  btn[i].onclick = function (e) {
-    e.preventDefault();
-    modal = document.querySelector(e.target.getAttribute('href'));
-    modal.style.display = 'block';
-  };
-}
-
-for (var i = 0; i < spans.length; i++) {
-  spans[i].onclick = function () {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = 'none';
+    for (var i = 0; i < btn.length; i++) {
+      btn[i].onclick = function(e) {
+        e.preventDefault();
+        modal = document.querySelector(e.target.getAttribute('href'));
+        modal.style.display = 'block';
+      };
     }
-  };
-}
 
-window.onclick = function (event) {
-  if (event.target.classList.contains('modal')) {
-    for (var index in modals) {
-      if (typeof modals[index].style !== 'undefined') modals[index].style.display = 'none';
+    for (var i = 0; i < spans.length; i++) {
+      spans[i].onclick = function() {
+        for (var index in modals) {
+          if (typeof modals[index].style !== 'undefined') modals[index].style.display = 'none';
+        }
+      };
     }
-  }
-};
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
-<script>
+
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal')) {
+        for (var index in modals) {
+          if (typeof modals[index].style !== 'undefined') modals[index].style.display = 'none';
+        }
+      }
+    };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha256-pQBbLkFHcP1cy0C8IhoSdxlm0CtcH5yJ2ki9jjgR03c=" crossorigin="anonymous"></script>
+  <script>
     AOS.init({
       easing: 'ease-out-quad',
       duration: 800,
       mirror: true,
     });
-</script>
+  </script>
 
 </body>
 
